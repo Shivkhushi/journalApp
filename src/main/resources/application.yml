@@ -2,13 +2,13 @@ weather:
   api:
     key: ${WEATHER_API_KEY}
 spring:
-  security:
-    oauth2:
-      client:
-        registration:
-          google:
-            client-id: ${GOOGLE_CLIENT_ID}
-            client-secret: ${GOOGLE_CLIENT_SECRET}
+  #  security:
+  #    oauth2:
+  #      client:
+  #        registration:
+  #          google:
+  #            client-id: ${GOOGLE_CLIENT_ID}
+  #            client-secret: ${GOOGLE_CLIENT_SECRET}
   main:
     allow-circular-references: true
   server:
@@ -37,7 +37,7 @@ spring:
           starttls:
             enable: true
   kafka:
-    bootstrap-servers: ${KAFKA_SERVERS}
+    #    bootstrap-servers: ${KAFKA_SERVERS}
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
